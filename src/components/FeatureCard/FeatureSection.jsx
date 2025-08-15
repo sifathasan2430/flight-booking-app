@@ -135,6 +135,19 @@ const FeatureSection = () => {
     image:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fairline%2F&psig=AOvVaw0U0u3MlaFl6nRS6ZmpBR1h&ust=1754754798955000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDBv5fJ-44DFQAAAAAdAAAAABAE",
 
   },
+   {
+    id: 10,
+    airline: "CX",
+    from: "DAC",
+    to: "HKG",
+    departure: "2025-08-12T06:50:00",
+    arrival: "2025-08-12T13:15:00",
+    duration: "PT6H25M",
+    price: 789.99,
+    currency: "EUR",
+    image:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fairline%2F&psig=AOvVaw0U0u3MlaFl6nRS6ZmpBR1h&ust=1754754798955000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLDBv5fJ-44DFQAAAAAdAAAAABAE",
+
+  },
 ]
   return (
     <section>
