@@ -17,7 +17,7 @@ const FlightsPage = () => {
     setFlights(response.data || []);
     setLoading(false);
   };
-
+console.log(flights)
   return (
     <div className="flex flex-col md:flex-row gap-8 p-4 md:p-6 bg-gray-50 min-h-screen">
       <aside className="w-full md:w-1/4 md:sticky top-6 h-auto md:h-screen">

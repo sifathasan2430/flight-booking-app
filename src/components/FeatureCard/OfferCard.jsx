@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Clock, Plane } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const OfferCard = ({ flight }) => {
   const { itineraries, price } = flight;
@@ -12,7 +13,7 @@ const OfferCard = ({ flight }) => {
     const date = new Date(dateString);
     return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   };
-
+const navigate=useNavigate()
   return (
     <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden my-4">
       <div className="md:flex">
@@ -44,7 +45,7 @@ const OfferCard = ({ flight }) => {
             </div>
           </div>
           <div className="mt-6 text-right">
-            <Button className="bg-gradient-to-r from-[#ff9a68] to-[#ff7f4d] text-white font-bold py-2 px-6 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <Button onClick={()=> navigate(`/flight-details/${flight.id}`,{state:flight})} className="bg-gradient-to-r from-[#ff9a68] to-[#ff7f4d] text-white font-bold py-2 px-6 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer">
               View Details
             </Button>
           </div>

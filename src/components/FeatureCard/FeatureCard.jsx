@@ -1,5 +1,6 @@
 import React from "react";
 import { Clock, DollarSign, PlaneTakeoff, PlaneLanding } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const FeatureCard = ({
   airline,
@@ -12,7 +13,7 @@ const FeatureCard = ({
   currency,
   featured,
   onViewDetails,
-  image
+  image,flight
 }) => {
   
   const formatTime = (iso) =>
@@ -22,7 +23,7 @@ const FeatureCard = ({
       hour: "2-digit",
       minute: "2-digit",
     });
-
+const navigate=useNavigate()
   return (
     <div className="relative rounded-2xl bg-white dark:bg-[#1f1f1f] shadow-sm hover:shadow-lg transition-all overflow-hidden border dark:border-gray-800">
       
@@ -74,7 +75,7 @@ const FeatureCard = ({
       
         <div className="pt-3">
           <button
-            onClick={onViewDetails}
+            onClick={() => navigate("/flight-details", { state: { flight } })}
             className="w-full bg-amber-500 hover:bg-amber-600 text-white font-medium py-2 rounded-md transition"
           >
             View Details

@@ -33,7 +33,7 @@ const  FlightCard=({ flight })=> {
       <div className="mt-auto flex items-center justify-between">
         <span className="text-2xl font-bold text-orange-600">${price}</span>
         <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg">
-          View Deal
+          View Deals
         </button>
       </div>
     </div>

@@ -149,7 +149,7 @@ const FeatureSection = () => {
             <FeatureCard
               key={flight.id}
               {...flight}
-             
+             flight={flightsData}
             />
           ))}
       </div>
